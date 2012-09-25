@@ -1,33 +1,37 @@
-int incomingByte = 0;
+int ledPin = 7;
 
 void setup() {
+  pinMode(7, OUTPUT);
   Serial.begin(9600);
   delay(500);
   Serial.println("hello python!");
-  pinMode(13, OUTPUT);
-  digitalWrite(13, LOW);
 }
 
-int ledTimeout = 2000;
+int ledOn = 0;
+int ledTimeout = 9600;
 int ledTimeon = 0;
-int ledOn = 1;
 
 void loop() {
-  while(Serial.available() == 1) {
-    blinkLed();
-    Serial.flush();
-  }
+  int receivedData;
   
-  if(ledOn == 1) {
-    ledTimeon++;
-    if(ledTimeon == ledTimeout) {
-      ledOn = 0;
-      digitalWrite(13, LOW);
-      ledTimeon = 0;
+  while(Serial.available() == 0) {
+    if(ledOn == 1) {
+      ledTimeon++;
+      if(ledTimeon == ledTimeout) {
+        ledOn = 0;
+        ledTimeon = 0;
+        digitalWrite(ledPin, LOW);
+      }
     }
   }
   
- 
+  receivedData = Serial.read() - '0';
+  Serial.flush();
+  
+  if(receivedData == 0) {
+    ledOn = 1;
+    digitalWrite(ledPin, HIGH);
+  }
   
   delay(1);
 }
