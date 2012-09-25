@@ -1,6 +1,5 @@
 int leds[5] = {3, 4, 5, 6, 7};
 int pot = 1;
-int baseLED = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -8,7 +7,6 @@ void setup() {
   for(int i=0; i<5; i++) {
     pinMode(leds[i], OUTPUT);
   }
-  digitalWrite(4, HIGH);
   pinMode(pot, INPUT);
 }
 
