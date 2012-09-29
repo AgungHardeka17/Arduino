@@ -15,7 +15,7 @@ lastFetchTime = 0
 mentionsInterval = 15
 
 ##Authenticate with Twitter API
-api = twitter.Api(consumer_key='iQtIi2Ws9thbYzdVpXR9A', consumer_secret='Ah57xPprjvLWXx5Zd73F1caXD0J6G096n20dUSXo', access_token_key='842181841-htj7gl9DaWB08pJYARxDtTEdSFdqDrTEGnUydXAZ', access_token_secret='lm2eAlZwksCP3JbcmkDggFDP1LQkEMa8gACtJHSRDc4') 
+api = twitter.Api(consumer_key='YOUR KEY', consumer_secret='YOUR SECRET', access_token_key='YOUR TOKEN KEY', access_token_secret='YOUR TOKEN SECRET') 
 
 ##Configure Serial Port
 arduino = serial.Serial('/dev/tty.usbmodemfa141', 9600)
