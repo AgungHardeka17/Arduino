@@ -13,5 +13,5 @@ I used some libraries to come up with the result. Your dependancies are:
 
 ## Instructions
 You should replace these lines of code with your own Twitter app API data:  
-`api = twitter.Api(consumer_key='iQtIi2Ws9thbYzdVpXR9A', consumer_secret='Ah57xPprjvLWXx5Zd73F1caXD0J6G096n20dUSXo', access_token_key='842181841-htj7gl9DaWB08pJYARxDtTEdSFdqDrTEGnUydXAZ', access_token_secret='lm2eAlZwksCP3JbcmkDggFDP1LQkEMa8gACtJHSRDc4')`
+`api = twitter.Api(consumer_key='CONSUMER_KEY', consumer_secret='CONSUMER_SECRET', access_token_key='TOKEN_KEY', access_token_secret='TOKEN_SECRET')`
 You can apply for a Twitter API key here: [https://dev.twitter.com/apps/new](https://dev.twitter.com/apps/new).
