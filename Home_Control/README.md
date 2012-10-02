@@ -12,6 +12,11 @@ I used some libraries to come up with the result. Your dependancies are:
 * [python-twitter](http://code.google.com/p/python-twitter/) a wrapper for communication between Twitter and Python
 
 ## Instructions
-You should replace these lines of code with your own Twitter app API data:  
-`api = twitter.Api(consumer_key='CONSUMER_KEY', consumer_secret='CONSUMER_SECRET', access_token_key='TOKEN_KEY', access_token_secret='TOKEN_SECRET')`
 You can apply for a Twitter API key here: [https://dev.twitter.com/apps/new](https://dev.twitter.com/apps/new).
+
+In order to get this to work you need to create a config file of your own. The config file should be called 'config.py' and contain the following content:
+`consumer_key='YOUR KEY'
+consumer_secret='YOUR SECRET'
+access_token_key='YOUR TOKEN KEY'
+access_token_secret='YOUR TOKEN SECRET'
+serial_port='YOUR USB PORT'`
