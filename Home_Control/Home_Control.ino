@@ -1,5 +1,5 @@
 #define DARK_MSG 0
-3define LIGHT_MSG 1
+#define LIGHT_MSG 1
 
 // define pins
 int led = 9;
