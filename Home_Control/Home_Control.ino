@@ -1,4 +1,5 @@
 #define DARK_MSG 0
+3define LIGHT_MSG 1
 
 // define pins
 int led = 9;
@@ -24,8 +25,10 @@ void setup() {
 
 void loop() {
     int lightVal = analogRead(lightSensor);
-    if(lightVal >= 950) {
+    if(lightVal >= 980) {
         sendMessage(DARK_MSG);
+    } else {
+      sendMessage(LIGHT_MSG);
     }
     
     if(serialReceived == true) {
